@@ -214,27 +214,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="modern-card p-8 card-hover">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">Follow Me</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center p-4 bg-slate-50 border border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-300 transition-all duration-300 transform hover:scale-105 group"
-                  >
-                    <div className="text-slate-600 group-hover:text-primary-600 transition-colors duration-200">
-                      {social.icon}
-                    </div>
-                    <span className="ml-3 font-semibold text-slate-700 group-hover:text-slate-800">{social.label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
+      
             {/* Call to Action */}
             <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
               <h3 className="text-xl font-bold gradient-text mb-4">Open to Opportunities</h3>
