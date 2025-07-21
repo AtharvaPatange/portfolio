@@ -1,4 +1,10 @@
 import { Trophy, Eye, Github, ExternalLink, Target, Zap } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 const Projects = () => {
   const projects = [
@@ -48,88 +54,102 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-12">
+        <Swiper
+          modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow]}
+          spaceBetween={32}
+          slidesPerView={1}
+          centeredSlides={true}
+          loop={true}
+          speed={800}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          effect="coverflow"
+          coverflowEffect={{ rotate: 30, stretch: 0, depth: 200, modifier: 1, slideShadows: false }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            hideOnClick: true,
+          }}
+          pagination={{ clickable: true }}
+          className="!pb-12"
+          breakpoints={{
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 1.2 },
+          }}
+        >
           {projects.map((project, index) => (
-            <div key={index} className="modern-card rounded-3xl overflow-hidden card-hover group">
-              <div className={`h-1 bg-gradient-to-r ${project.color}`}></div>
-              
-              <div className="p-8">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold text-slate-800 mb-2 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
-                    <p className="text-xl text-primary-600 mb-4 font-medium">{project.subtitle}</p>
-                    <p className="text-slate-600 text-lg leading-relaxed mb-6">{project.description}</p>
+            <SwiperSlide key={index}>
+              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl">
+                {/* Modern gradient border accent */}
+                <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color} z-10`}></div>
+                {/* Floating badge for award */}
+                {project.award && (
+                  <div className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-amber-100/90 border border-amber-300 text-amber-700 rounded-full shadow-md font-semibold text-sm animate-pulse">
+                    <Trophy size={18} className="mr-1" />
+                    Winner
                   </div>
-                  
-                  {project.award && (
-                    <div className="lg:ml-6 mb-4 lg:mb-0">
-                      <div className="flex items-center bg-amber-50 border border-amber-200 text-amber-700 px-4 py-2 rounded-xl font-semibold">
-                        <Trophy size={20} className="mr-2" />
-                        <span>Winner</span>
+                )}
+                <div className="p-8 md:p-10 flex flex-col gap-6">
+                  <div>
+                    <h3 className="text-3xl font-extrabold text-slate-800 mb-1 gradient-text drop-shadow-sm">{project.title}</h3>
+                    <p className="text-lg text-primary-600 mb-3 font-medium">{project.subtitle}</p>
+                  </div>
+                  <p className="text-slate-600 text-lg leading-relaxed mb-2">{project.description}</p>
+                  {project.architecture && (
+                    <div className="mb-2">
+                      <h4 className="text-base font-semibold text-accent-600 mb-1 flex items-center gap-2">
+                        <Target size={18} /> Architecture
+                      </h4>
+                      <p className="text-slate-600 bg-slate-50 border border-slate-200 p-3 rounded-lg font-mono text-xs">
+                        {project.architecture}
+                      </p>
+                    </div>
+                  )}
+                  {project.features && (
+                    <div className="mb-2">
+                      <h4 className="text-base font-semibold text-secondary-600 mb-1 flex items-center gap-2">
+                        <Zap size={18} /> Key Features
+                      </h4>
+                      <ul className="grid md:grid-cols-2 gap-2 list-disc list-inside">
+                        {project.features.map((feature, idx) => (
+                          <li key={idx} className="text-slate-600 text-sm flex items-start gap-2">
+                            <span className="inline-block w-2 h-2 bg-primary-500 rounded-full mt-2"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mt-2">
+                    <div>
+                      <h4 className="text-xs font-semibold text-slate-500 mb-1 uppercase tracking-wide">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, idx) => (
+                          <span key={idx} className="px-3 py-1 bg-primary-50 border border-primary-200 text-primary-700 rounded-full text-xs font-medium hover:bg-primary-100 transition-colors duration-200">
+                            {tech}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  )}
-                </div>
-
-                {project.architecture && (
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-accent-600 mb-3 flex items-center">
-                      <Target size={20} className="mr-2" />
-                      Architecture
-                    </h4>
-                    <p className="text-slate-600 bg-slate-50 border border-slate-200 p-4 rounded-xl font-mono text-sm">
-                      {project.architecture}
-                    </p>
+                    {project.accuracy && (
+                      <div className="text-right">
+                        <h4 className="text-xs font-semibold text-slate-500 mb-1 uppercase tracking-wide">Accuracy</h4>
+                        <p className="text-xl font-bold gradient-text">{project.accuracy}</p>
+                      </div>
+                    )}
                   </div>
-                )}
-
-                {project.features && (
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-secondary-600 mb-3 flex items-center">
-                      <Zap size={20} className="mr-2" />
-                      Key Features
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {project.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-start">
-                          <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <p className="text-slate-600">{feature}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="mb-4 md:mb-0">
-                    <h4 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wide">Tech Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-primary-50 border border-primary-200 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-100 transition-colors duration-200">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {project.accuracy && (
-                    <div className="text-right">
-                      <h4 className="text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wide">Accuracy</h4>
-                      <p className="text-2xl font-bold gradient-text">{project.accuracy}</p>
+                  {project.impact && (
+                    <div className="pt-4 border-t border-slate-200">
+                      <h4 className="text-xs font-semibold text-orange-600 mb-1 uppercase tracking-wide">Impact</h4>
+                      <p className="text-slate-600 text-sm">{project.impact}</p>
                     </div>
                   )}
                 </div>
-
-                {project.impact && (
-                  <div className="mt-6 pt-6 border-t border-slate-200">
-                    <h4 className="text-sm font-semibold text-orange-600 mb-2 uppercase tracking-wide">Impact</h4>
-                    <p className="text-slate-600">{project.impact}</p>
-                  </div>
-                )}
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+          <div className="swiper-button-prev hidden md:block"></div>
+          <div className="swiper-button-next hidden md:block"></div>
+        </Swiper>
       </div>
     </div>
   );
