@@ -63,6 +63,22 @@ const Projects = () => {
       tech: ["Google Earth Engine", "Random Forest", "Python", "Scikit-learn"],
       award: "Winner, Infosys AI in Action – National-level hackathon",
       color: "from-primary-500 to-accent-500"
+    },
+    {
+      title: "Nationwide Hackathon Winner",
+      subtitle: "🏆 SKN Sinhgad College of Engineering, Korti, Pandharpur • Mar 2025",
+      description: "Built an award-winning low-bandwidth telemedicine platform tailored for rural healthcare, AI-based diagnostics (ECG, X-ray, retina, etc.), RAG-powered chatbot, multilingual voice assistance, offline chat (WebSockets), IVR emergency support.",
+      tech: ["AI/ML", "RAG", "WebSockets", "Voice Assistance", "Telemedicine"],
+      award: "Winner, Nationwide Hackathon",
+      color: "from-primary-500 to-accent-500"
+    },
+    {
+      title: "Google Gemini API Developer Competition",
+      subtitle: "🤖 Google",
+      description: "Developed an AI-powered app, Cookbook, using the Gemini API to enhance user experience. The event is part of the global competition for developers working with the Gemini API.",
+      tech: ["Gemini API", "AI/ML", "Cookbook App"],
+      award: "Gemini API Developer Competition",
+      color: "from-secondary-500 to-accent-500"
     }
   ];
 

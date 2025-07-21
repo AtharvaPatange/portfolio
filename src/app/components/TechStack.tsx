@@ -18,9 +18,10 @@ const TechStack = () => {
       icon: <Brain className="w-8 h-8" />,
       skills: [
         { name: "Python", level: 95 },
-        { name: "TensorFlow", level: 90 },
-        { name: "OpenCV", level: 85 },
-        { name: "YOLOv8", level: 82 }
+        { name: "Java", level: 90 },
+        { name: "AI/ML", level: 92 },
+        { name: "Generative AI", level: 85 },
+        { name: "RAG (Retrieval-Augmented Generation)", level: 80 }
       ]
     },
     {
@@ -37,8 +38,9 @@ const TechStack = () => {
       name: "Frontend & Mobile",
       icon: <Smartphone className="w-8 h-8" />,
       skills: [
-        { name: "React", level: 88 },
+        { name: "React.js", level: 88 },
         { name: "Next.js", level: 85 },
+        { name: "Javascript", level: 90 },
         { name: "TypeScript", level: 82 },
         { name: "Tailwind CSS", level: 90 }
       ]

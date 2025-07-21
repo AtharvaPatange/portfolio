@@ -4,40 +4,45 @@ const Achievements = () => {
   const achievements = [
     {
       icon: <Trophy className="w-8 h-8" />,
-      title: "Winner, Infosys AI in Action Hackathon",
-      description: "National-level hackathon winner for AI-powered crop classification system",
+      title: "Nationwide Hackathon Winner",
+      description: "Built an award-winning low-bandwidth telemedicine platform tailored for rural healthcare, AI-based diagnostics, RAG-powered chatbot, multilingual voice assistance, offline chat, IVR emergency support.",
       highlight: "🏆 National Winner"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Google Gemini API Developer Competition",
-      description: "Developed an AI-powered app, Cookbook,The event is part of the global competition for developers working with the Gemini API.",
+      description: "Developed an AI-powered app, Cookbook, using the Gemini API. The event is part of the global competition for developers working with the Gemini API.",
       highlight: "🤖 Gemini API Developer"
     },
-  
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Founder at Nexentia",
-      description: "Founded AI & Software startup focusing on automation, web, Android, and SEO/SEM services",
-      highlight: "🌐 Startup Founder"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "LinkedIn Network",
-      description: "500+ LinkedIn connections, building a strong professional network in tech and AI.",
-      highlight: "🔗 500+ Connections"
+      icon: <Trophy className="w-8 h-8" />,
+      title: "Infosys 'AI in Action' National Competition",
+      description: "Won a nationwide competition held at Infosys Bangalore DC. Worked on 'Sowing Smarter: AI-powered Crop Classification' using satellite data and machine learning to assist farmers.",
+      highlight: "🏆 Infosys National Winner"
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Problem Solving: 250+ DSA Problems",
-      description: "Successfully solved over 250+ DSA problems consistently using Java.",
-      highlight: "📚 250+ DSA Problems"
+      title: "Problem Solving: 300+ DSA Problems",
+      description: "Successfully solved over 300+ DSA problems consistently using Java. Leetcode contest rating: 1463.",
+      highlight: "📚 300+ DSA Problems"
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "International AI Project Income",
-      description: "Earned international income via Outlier as AI Expert from 4 successful LLM-based projects",
-      highlight: "🌍 International Income"
+      icon: <Award className="w-8 h-8" />,
+      title: "Django Certification Course",
+      description: "Google Launchpad • 1717818168126 • Issued Jun 2024",
+      highlight: "🎓 Certification"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Object Oriented Programming",
+      description: "Infosys Springboard • Issued Mar 2024",
+      highlight: "🎓 Certification"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Python Advanced Certification Course",
+      description: "Google Launchpad • 1704189764866 • Issued Jan 2024",
+      highlight: "🎓 Certification"
     }
   ];
 

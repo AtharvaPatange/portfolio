@@ -5,30 +5,24 @@ const Experience = () => {
     {
       title: "SDE Intern",
       company: "Logstrike",
-      duration: "May - June 2025",
+      duration: "Mar 2025 - Jun 2025",
       location: "Remote",
       description: [
-        "Developed a browser-based CI/CD automation tool using Stagehand",
-        "Built micro frontend UI libraries for open-source use",
-        "Managed cloud infra with DigitalOcean (droplets, cluster, server optimization on Linux VMs)",
-        "Built a full-stack AI chip e-commerce platform with Next.js + Firebase + GCP",
-        "Integrated Meilisearch for blazing-fast search and Shiprocket API for live order tracking",
-        "Implemented Firebase custom claims for secure role-based access"
+        "Developed and deployed a full-stack AI chip import e-commerce platform using Next.js, Firebase, and GCP, integrating Meilisearch for optimized search and Shiprocket API for order logistics and tracking.",
+        "Utilized Google Cloud Platform (GCP) services like Firestore, Cloud Functions, and Custom Claims for seamless, scalable backend operations."
       ],
-      tech: ["Next.js", "Firebase", "GCP", "DigitalOcean", "Meilisearch", "Shiprocket API"]
+      tech: ["Next.js", "Firebase", "GCP", "Meilisearch", "Shiprocket API"]
     },
-    
     {
-      title: "Backend Dev Intern",
-      company: "Infosys",
+      title: "Team Leader, Backend Development - Insurance Management System",
+      company: "Infosys SpringBoard",
       duration: "2024",
       location: "Remote",
       description: [
-        "Developed Django-based insurance management system",
-        "Implemented secure authentication and authorization",
-        "Optimized database queries for better performance"
+        "Led a team of 7 interns to build a Django-based insurance management system, ensuring timely delivery and high-quality outcomes.",
+        "Improved system reliability and performance by implementing automation scripts using Python."
       ],
-      tech: ["Django", "Python", "PostgreSQL", "REST APIs"]
+      tech: ["Django", "Python"]
     }
   ];
 

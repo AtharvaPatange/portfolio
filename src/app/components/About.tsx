@@ -13,9 +13,13 @@ const About = () => {
               <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
                 🎓 <span>Education & Background</span>
               </h3>
+              <p className="text-slate-600 text-lg leading-relaxed mb-2">
+                <span className="text-slate-800 font-semibold">Walchand Institute of Technology, Solapur</span><br/>
+                <span className="italic">BTech • <b>Information Technology (Major)</b>, Electronics and Computer Engineering (Minor)</span> • 2022 - 2027
+              </p>
               <p className="text-slate-600 text-lg leading-relaxed">
-                I'm a 3rd-year B.Tech student from <span className="text-slate-800 font-semibold">Walchand Institute of Technology</span>, 
-                majoring in Information Technology and minoring in Electronics and Computer Engineering.
+                <span className="text-slate-800 font-semibold">Walchand College of Arts and Science, Solapur</span><br/>
+                <span className="italic">Higher Secondary Certificate (HSC)</span> • 2020 - 2022
               </p>
             </div>
 
