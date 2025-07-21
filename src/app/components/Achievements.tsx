@@ -53,7 +53,7 @@ const Achievements = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Achievements & Milestones</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Celebrating the journey of innovation, learning, and impact
           </p>
@@ -101,7 +101,7 @@ const Achievements = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
+          <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Ready to Collaborate?</h3>
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed">
               I'm always excited to work on innovative projects that push the boundaries of AI/ML and create meaningful impact.

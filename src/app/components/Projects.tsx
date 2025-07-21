@@ -1,12 +1,22 @@
 import { Trophy, Eye, Github, ExternalLink, Target, Zap } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
+import { Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
 
 const Projects = () => {
-  const projects = [
+  const projects: Array<{
+    title: string;
+    subtitle: string;
+    description: string;
+    architecture?: string;
+    impact?: string;
+    tech: string[];
+    award?: string;
+    features?: string[];
+    accuracy?: string;
+    color: string;
+  }> = [
     {
       title: "AI-Powered Crop Classification",
       subtitle: "🏆 Hackathon Winner - Infosys Bangalore DC",
@@ -14,7 +24,8 @@ const Projects = () => {
       architecture: "Data Collection → Preprocessing → Feature Extraction → ML Training → Classification",
       impact: "Optimized agriculture monitoring, yield prediction, and food security planning",
       tech: ["Google Earth Engine", "Random Forest", "Python", "Scikit-learn"],
-      award: "Winner, Infosys AI in Action – National-level hackathon"
+      award: "Winner, Infosys AI in Action – National-level hackathon",
+      color: "from-primary-500 to-accent-500"
     },
     {
       title: "Fake News & Deepfake Detection System",
@@ -25,7 +36,8 @@ const Projects = () => {
         "CNN + LSTM for fake face detection in deepfake videos"
       ],
       tech: ["TensorFlow", "Python", "Flask", "LLM APIs", "Google News API"],
-      impact: "Combats misinformation using hybrid AI models"
+      impact: "Combats misinformation using hybrid AI models",
+      color: "from-secondary-500 to-accent-500"
     },
     {
       title: "Smart Waste Bin",
@@ -38,7 +50,18 @@ const Projects = () => {
         "Rewards system, user gamification, revenue opportunities"
       ],
       tech: ["YOLOv8", "ResNet", "Firebase", "Python", "Flutter", "ML"],
-      accuracy: "95%"
+      accuracy: "95%",
+      color: "from-primary-500 to-accent-500"
+    },
+    {
+      title: "AI-Powered Crop Classification",
+      subtitle: "🏆 Hackathon Winner - Infosys Bangalore DC",
+      description: "Used Random Forest on satellite imagery (Google Earth Engine) to classify crops for optimizing agriculture monitoring, yield prediction, and food security planning.",
+      architecture: "Data Collection → Preprocessing → Feature Extraction → ML Training → Classification",
+      impact: "Optimized agriculture monitoring, yield prediction, and food security planning",
+      tech: ["Google Earth Engine", "Random Forest", "Python", "Scikit-learn"],
+      award: "Winner, Infosys AI in Action – National-level hackathon",
+      color: "from-primary-500 to-accent-500"
     }
   ];
 
@@ -51,16 +74,13 @@ const Projects = () => {
         </div>
 
         <Swiper
-          modules={[Pagination, A11y, Autoplay, EffectCoverflow]}
+          modules={[Pagination, A11y, Autoplay]}
           spaceBetween={32}
           slidesPerView={1}
           centeredSlides={true}
-          loop={true}
-          loopFillGroupWithBlank={true}
+          loop={false}
           speed={800}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
-          effect="coverflow"
-          coverflowEffect={{ rotate: 30, stretch: 0, depth: 200, modifier: 1, slideShadows: false }}
           pagination={{ clickable: true }}
           className="!pb-12"
           breakpoints={{
@@ -72,7 +92,7 @@ const Projects = () => {
             <SwiperSlide key={index}>
               <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full">
                 {/* Modern gradient border accent */}
-                <div className="absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r from-primary-500 to-primary-600 z-10"></div>
+                <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color ? project.color : 'from-primary-500 to-accent-500'} z-10`}></div>
                 {/* Floating badge for award */}
                 {project.award && (
                   <div className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-amber-100/90 border border-amber-300 text-amber-700 rounded-full shadow-md font-semibold text-sm animate-pulse">
@@ -88,7 +108,7 @@ const Projects = () => {
                   <p className="text-slate-600 text-lg leading-relaxed mb-2">{project.description}</p>
                   {project.architecture && (
                     <div className="mb-2">
-                      <h4 className="text-base font-semibold text-primary-600 mb-1 flex items-center gap-2">
+                      <h4 className="text-base font-semibold text-accent-600 mb-1 flex items-center gap-2">
                         <Target size={18} /> Architecture
                       </h4>
                       <p className="text-slate-600 bg-slate-50 border border-slate-200 p-3 rounded-lg font-mono text-xs">
@@ -98,7 +118,7 @@ const Projects = () => {
                   )}
                   {project.features && (
                     <div className="mb-2">
-                      <h4 className="text-base font-semibold text-primary-600 mb-1 flex items-center gap-2">
+                      <h4 className="text-base font-semibold text-secondary-600 mb-1 flex items-center gap-2">
                         <Zap size={18} /> Key Features
                       </h4>
                       <ul className="grid md:grid-cols-2 gap-2 list-disc list-inside">

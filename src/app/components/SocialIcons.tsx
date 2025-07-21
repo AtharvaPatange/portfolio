@@ -10,40 +10,40 @@ const SocialIcons = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       href: "mailto:atharvapatange07@gmail.com",
-      color: "hover:bg-emerald-500",
-      bgColor: "bg-emerald-500",
+      color: "hover:bg-primary-500",
+      bgColor: "bg-primary-500",
       label: "Email",
       username: "atharvapatange07@gmail.com"
     },
     {
       icon: <Github className="w-5 h-5" />,
       href: "https://github.com/AtharvaPatange",
-      color: "hover:bg-slate-700",
-      bgColor: "bg-slate-700",
+      color: "hover:bg-primary-600",
+      bgColor: "bg-primary-600",
       label: "GitHub",
       username: "@AtharvaPatange"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       href: "https://www.linkedin.com/in/atharva-patange-7596092a1/",
-      color: "hover:bg-blue-600",
-      bgColor: "bg-blue-600",
+      color: "hover:bg-primary-500",
+      bgColor: "bg-primary-500",
       label: "LinkedIn",
       username: "Atharva Patange"
     },
     {
       icon: <Youtube className="w-5 h-5" />,
       href: "https://www.youtube.com/@-AtharvaPatange",
-      color: "hover:bg-red-500",
-      bgColor: "bg-red-500",
+      color: "hover:bg-primary-600",
+      bgColor: "bg-primary-600",
       label: "YouTube",
       username: "@AtharvaPatange"
     },
     {
       icon: <Code className="w-5 h-5" />,
       href: "https://leetcode.com/u/Atharva__93/",
-      color: "hover:bg-orange-500",
-      bgColor: "bg-orange-500",
+      color: "hover:bg-primary-500",
+      bgColor: "bg-primary-500",
       label: "LeetCode",
       username: "Atharva__93"
     }
