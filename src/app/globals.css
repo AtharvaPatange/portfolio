@@ -183,8 +183,8 @@ body {
 }
 
 .tech-icon:hover {
-  transform: scale(1.2) rotate(10deg);
-  filter: drop-shadow(0 0 20px currentColor);
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 10px currentColor);
 }
 
 @media (max-width: 768px) {

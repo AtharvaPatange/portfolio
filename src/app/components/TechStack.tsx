@@ -129,6 +129,7 @@ const TechStack = () => {
               <div
                 key={index}
                 className="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-full hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700 transition-all duration-200 cursor-pointer tech-icon font-medium"
+
               >
                 {tech}
               </div>
