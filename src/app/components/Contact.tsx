@@ -78,31 +78,31 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-gradient-to-b from-bg-primary to-bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Let's Collaborate</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Ready to work together on innovative AI/ML projects? Let's create something amazing!
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+          <div className="modern-card p-8 card-hover">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6">Send a Message</h3>
             
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                <p className="text-green-400">Thanks for your message! I'll get back to you soon.</p>
+              <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                <p className="text-emerald-700 font-medium">Thanks for your message! I'll get back to you soon.</p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
                     Your Name
                   </label>
                   <input
@@ -112,12 +112,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-slate-800 transition-all duration-200 hover:border-slate-300"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
                     Your Email
                   </label>
                   <input
@@ -127,14 +127,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-slate-800 transition-all duration-200 hover:border-slate-300"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
                   Subject
                 </label>
                 <input
@@ -144,13 +144,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-slate-800 transition-all duration-200 hover:border-slate-300"
                   placeholder="Let's collaborate on an AI project"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -160,7 +160,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-slate-800 transition-all duration-200 hover:border-slate-300 resize-none"
                   placeholder="Tell me about your project idea or how we can work together..."
                 ></textarea>
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
+                className="modern-button w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -188,25 +188,25 @@ const Contact = () => {
           {/* Contact Info & Social Links */}
           <div className="space-y-8">
             {/* Contact Info */}
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+            <div className="modern-card p-8 card-hover">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Get In Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="p-3 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg mr-4">
-                      {info.icon}
+                    <div className="p-3 bg-gradient-to-r from-primary-100 to-accent-100 rounded-xl mr-4">
+                      <div className="text-primary-600">{info.icon}</div>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-sm">{info.label}</p>
+                      <p className="text-slate-500 text-sm font-medium">{info.label}</p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-gray-900 font-medium hover:text-cyan-600 transition-colors duration-200"
+                          className="text-slate-800 font-semibold hover:text-primary-600 transition-colors duration-200"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-900 font-medium">{info.value}</p>
+                        <p className="text-slate-800 font-semibold">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -215,8 +215,8 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Me</h3>
+            <div className="modern-card p-8 card-hover">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Follow Me</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -224,25 +224,27 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 ${social.color.replace('text-', 'text-')}`}
+                    className="flex items-center p-4 bg-slate-50 border border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-300 transition-all duration-300 transform hover:scale-105 group"
                   >
-                    {social.icon}
-                    <span className="ml-3 font-medium">{social.label}</span>
+                    <div className="text-slate-600 group-hover:text-primary-600 transition-colors duration-200">
+                      {social.icon}
+                    </div>
+                    <span className="ml-3 font-semibold text-slate-700 group-hover:text-slate-800">{social.label}</span>
                   </a>
                 ))}
               </div>
             </div>
 
             {/* Call to Action */}
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
+            <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
               <h3 className="text-xl font-bold gradient-text mb-4">Open to Opportunities</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-600 mb-4 leading-relaxed">
                 I'm always interested in challenging projects, research opportunities, and collaborations in AI/ML, 
                 full-stack development, and innovative tech solutions.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["AI/ML Projects", "Research", "Hackathons", "Consulting", "Full-Stack Dev"].map((tag, index) => (
-                  <span key={index} className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-600 rounded-full text-sm">
+                  <span key={index} className="px-3 py-1 bg-gradient-to-r from-primary-50 to-accent-50 border border-primary-200 text-primary-700 rounded-full text-sm font-medium">
                     {tag}
                   </span>
                 ))}

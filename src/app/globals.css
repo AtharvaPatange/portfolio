@@ -3,17 +3,43 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --primary: #00B4D8;
-  --secondary: #48CAE4;
-  --accent: #8B5FFF;
-  --success: #43AA8B;
-  --warning: #FFD700;
-  --error: #FF4757;
-  --bg-light: #F8FAFC;
-  --bg-lighter: #FFFFFF;
-  --text-dark: #1A202C;
-  --text-gray: #4B5563;
-  --border: #E5E7EB;
+  /* Modern Portfolio Color Palette */
+  --primary: #3B82F6;        /* Blue 500 - Professional & trustworthy */
+  --primary-light: #60A5FA;  /* Blue 400 */
+  --primary-dark: #1D4ED8;   /* Blue 700 */
+  
+  --secondary: #8B5CF6;      /* Violet 500 - Creative & innovative */
+  --secondary-light: #A78BFA; /* Violet 400 */
+  --secondary-dark: #7C3AED; /* Violet 600 */
+  
+  --accent: #06B6D4;         /* Cyan 500 - Tech & modern */
+  --accent-light: #22D3EE;   /* Cyan 400 */
+  --accent-dark: #0891B2;    /* Cyan 600 */
+  
+  --success: #10B981;        /* Emerald 500 */
+  --warning: #F59E0B;        /* Amber 500 */
+  --error: #EF4444;          /* Red 500 */
+  
+  /* Background Colors */
+  --bg-primary: #FFFFFF;     /* Pure white */
+  --bg-secondary: #F8FAFC;   /* Slate 50 - Subtle background */
+  --bg-tertiary: #F1F5F9;    /* Slate 100 - Card backgrounds */
+  --bg-accent: #F0F9FF;      /* Sky 50 - Accent sections */
+  
+  /* Text Colors */
+  --text-primary: #0F172A;   /* Slate 900 - Main text */
+  --text-secondary: #334155; /* Slate 700 - Secondary text */
+  --text-muted: #64748B;     /* Slate 500 - Muted text */
+  --text-light: #94A3B8;     /* Slate 400 - Light text */
+  
+  /* Border Colors */
+  --border: #E2E8F0;         /* Slate 200 */
+  --border-light: #F1F5F9;   /* Slate 100 */
+  --border-accent: #E0F2FE;  /* Sky 100 */
+  
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -27,8 +53,8 @@ html {
 }
 
 body {
-  color: var(--text-dark);
-  background: var(--bg-light);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   line-height: 1.6;
 }
 
@@ -39,8 +65,60 @@ body {
   background-clip: text;
 }
 
+.gradient-text-accent {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .gradient-bg {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.gradient-bg-accent {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+}
+
+.modern-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+}
+
+.modern-button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.modern-button-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modern-button-outline:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
 .card-hover {

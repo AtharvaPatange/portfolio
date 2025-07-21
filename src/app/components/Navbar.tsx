@@ -48,16 +48,16 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'backdrop-blur-lg bg-white/80 shadow-xl border-b border-gray-200'
-          : 'bg-white/60'
+          ? 'backdrop-blur-lg bg-white/90 shadow-xl border-b border-slate-200'
+          : 'bg-white/70'
       }`}
-      style={{ WebkitBackdropFilter: 'blur(16px)' }}
+      style={{ WebkitBackdropFilter: 'blur(20px)' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 flex-shrink-0 select-none">
-            <span className="text-cyan-400"><Sparkles size={28} /></span>
-            <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">AP</h1>
+            <span className="text-primary-500"><Sparkles size={28} /></span>
+            <h1 className="text-2xl font-extrabold tracking-tight gradient-text drop-shadow-lg">AP</h1>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:block">
@@ -66,13 +66,16 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`group relative px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200
-                    ${activeSection === item.id ? 'text-cyan-600' : 'text-gray-800 hover:text-cyan-600'}
+                  className={`group relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200
+                    ${activeSection === item.id 
+                      ? 'text-primary-600 bg-primary-50' 
+                      : 'text-slate-700 hover:text-primary-600 hover:bg-primary-50'
+                    }
                   `}
                 >
                   {item.name}
                   <span
-                    className={`absolute left-0 right-0 bottom-0 mx-auto h-0.5 bg-cyan-600 rounded transition-all duration-300
+                    className={`absolute left-0 right-0 bottom-0 mx-auto h-0.5 bg-primary-500 rounded transition-all duration-300
                       ${activeSection === item.id ? 'w-full' : 'w-0 group-hover:w-full'}`}
                     style={{ transitionProperty: 'width' }}
                   />
@@ -84,27 +87,30 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-600 hover:text-cyan-600 focus:outline-none focus:text-cyan-600 transition-colors"
+              className="text-slate-600 hover:text-primary-600 focus:outline-none focus:text-primary-600 transition-colors p-2 rounded-lg hover:bg-primary-50"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-16 left-0 w-full bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-200 transition-transform duration-300 ease-in-out
+        className={`md:hidden fixed top-16 left-0 w-full bg-white/95 backdrop-blur-lg shadow-lg border-b border-slate-200 transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-8 opacity-0 pointer-events-none'}`}
-        style={{ WebkitBackdropFilter: 'blur(16px)' }}
+        style={{ WebkitBackdropFilter: 'blur(20px)' }}
       >
         <div className="px-4 py-4 space-y-2">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className={`block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200
-                ${activeSection === item.id ? 'text-cyan-600' : 'text-gray-800 hover:text-cyan-600'}
+              className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200
+                ${activeSection === item.id 
+                  ? 'text-primary-600 bg-primary-50' 
+                  : 'text-slate-700 hover:text-primary-600 hover:bg-primary-50'
+                }
               `}
               onClick={() => setIsMobileMenuOpen(false)}
             >

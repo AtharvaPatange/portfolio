@@ -85,34 +85,34 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Tech Stack</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Here are the technologies and tools I use to bring ideas to life
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techCategories.map((category, index) => (
-            <div key={index} className="backdrop-blur-glass rounded-2xl p-8 card-hover">
+            <div key={index} className="modern-card p-8 card-hover group">
               <div className="flex items-center mb-6">
-                <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>
-                  {category.icon}
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">{category.icon}</div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
+                <h3 className="text-xl font-bold text-slate-800 group-hover:text-primary-600 transition-colors duration-300">{category.name}</h3>
               </div>
 
               <div className="space-y-4">
                 {category.skills.map((skill, idx) => (
                   <div key={idx} className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-cyan-600 font-semibold">{skill.level}%</span>
+                      <span className="text-slate-700 font-medium">{skill.name}</span>
+                      <span className="text-primary-600 font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-slate-100 rounded-full h-2">
                       <div
                         className={`h-2 rounded-full bg-gradient-to-r ${category.color} transition-all duration-1000 ease-out`}
                         style={{ width: `${skill.level}%` }}
@@ -126,13 +126,13 @@ const TechStack = () => {
         </div>
 
         {/* Additional Tech Icons */}
-        <div className="mt-16 pt-16 border-t border-gray-200">
+        <div className="mt-16 pt-16 border-t border-slate-200">
           <h3 className="text-2xl font-bold text-center gradient-text mb-8">Also Experienced With</h3>
           <div className="flex flex-wrap justify-center gap-6">
             {["Jupyter", "VS Code", "Postman", "Figma", "Adobe Creative Suite", "Slack", "Notion", "Jira"].map((tech, index) => (
               <div
                 key={index}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-all duration-200 cursor-pointer tech-icon"
+                className="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-full hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700 transition-all duration-200 cursor-pointer tech-icon font-medium"
               >
                 {tech}
               </div>

@@ -41,31 +41,31 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Major AI/ML Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div key={index} className="backdrop-blur-glass rounded-3xl overflow-hidden card-hover">
-              <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
+            <div key={index} className="modern-card rounded-3xl overflow-hidden card-hover group">
+              <div className={`h-1 bg-gradient-to-r ${project.color}`}></div>
               
               <div className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                    <p className="text-xl text-cyan-600 mb-4">{project.subtitle}</p>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">{project.description}</p>
+                    <h3 className="text-3xl font-bold text-slate-800 mb-2 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
+                    <p className="text-xl text-primary-600 mb-4 font-medium">{project.subtitle}</p>
+                    <p className="text-slate-600 text-lg leading-relaxed mb-6">{project.description}</p>
                   </div>
                   
                   {project.award && (
                     <div className="lg:ml-6 mb-4 lg:mb-0">
-                      <div className="flex items-center bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg">
+                      <div className="flex items-center bg-amber-50 border border-amber-200 text-amber-700 px-4 py-2 rounded-xl font-semibold">
                         <Trophy size={20} className="mr-2" />
-                        <span className="font-semibold">Winner</span>
+                        <span>Winner</span>
                       </div>
                     </div>
                   )}
@@ -73,11 +73,11 @@ const Projects = () => {
 
                 {project.architecture && (
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                    <h4 className="text-lg font-semibold text-accent-600 mb-3 flex items-center">
                       <Target size={20} className="mr-2" />
                       Architecture
                     </h4>
-                    <p className="text-gray-700 bg-gray-100 p-4 rounded-lg font-mono text-sm">
+                    <p className="text-slate-600 bg-slate-50 border border-slate-200 p-4 rounded-xl font-mono text-sm">
                       {project.architecture}
                     </p>
                   </div>
@@ -85,15 +85,15 @@ const Projects = () => {
 
                 {project.features && (
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-blue-600 mb-3 flex items-center">
+                    <h4 className="text-lg font-semibold text-secondary-600 mb-3 flex items-center">
                       <Zap size={20} className="mr-2" />
                       Key Features
                     </h4>
                     <div className="grid md:grid-cols-2 gap-3">
                       {project.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start">
-                          <div className="w-2 h-2 bg-cyan-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-700">{feature}</p>
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <p className="text-slate-600">{feature}</p>
                         </div>
                       ))}
                     </div>
@@ -102,10 +102,10 @@ const Projects = () => {
 
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-4 md:mb-0">
-                    <h4 className="text-sm font-semibold text-gray-500 mb-2">TECH STACK</h4>
+                    <h4 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wide">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-gray-200 text-cyan-600 rounded-full text-sm font-medium">
+                        <span key={idx} className="px-3 py-1 bg-primary-50 border border-primary-200 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-100 transition-colors duration-200">
                           {tech}
                         </span>
                       ))}
@@ -114,16 +114,16 @@ const Projects = () => {
 
                   {project.accuracy && (
                     <div className="text-right">
-                      <h4 className="text-sm font-semibold text-gray-500 mb-1">ACCURACY</h4>
+                      <h4 className="text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wide">Accuracy</h4>
                       <p className="text-2xl font-bold gradient-text">{project.accuracy}</p>
                     </div>
                   )}
                 </div>
 
                 {project.impact && (
-                  <div className="mt-6 pt-6 border-t border-gray-200">
-                    <h4 className="text-sm font-semibold text-orange-600 mb-2">IMPACT</h4>
-                    <p className="text-gray-700">{project.impact}</p>
+                  <div className="mt-6 pt-6 border-t border-slate-200">
+                    <h4 className="text-sm font-semibold text-orange-600 mb-2 uppercase tracking-wide">Impact</h4>
+                    <p className="text-slate-600">{project.impact}</p>
                   </div>
                 )}
               </div>

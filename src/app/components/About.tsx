@@ -1,44 +1,52 @@
 const About = () => {
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-gradient-to-b from-bg-primary to-bg-secondary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">About Me</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-cyan-600 mb-4">🎓 Education & Background</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                I'm a 3rd-year B.Tech student from <span className="text-gray-900 font-semibold">Walchand Institute of Technology</span>, 
+            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+              <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
+                🎓 <span>Education & Background</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                I'm a 3rd-year B.Tech student from <span className="text-slate-800 font-semibold">Walchand Institute of Technology</span>, 
                 majoring in Information Technology and minoring in Electronics and Computer Engineering.
               </p>
             </div>
 
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-green-600 mb-4">🚀 Specializations</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                I specialize in <span className="text-gray-900 font-semibold">AI/ML, GenAI and full-stack development</span>. 
+            <div className="modern-card p-8 card-hover border-l-4 border-accent-400">
+              <h3 className="text-2xl font-bold text-accent-600 mb-4 flex items-center gap-3">
+                🚀 <span>Specializations</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                I specialize in <span className="text-slate-800 font-semibold">AI/ML, GenAI and full-stack development</span>. 
                 My passion lies in creating intelligent solutions that solve real-world problems.
               </p>
             </div>
 
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-purple-600 mb-4">💼 Professional Experience</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                Selected as an <span className="text-gray-900 font-semibold">AI Expert on Outlier</span>, earned international income ($25) 
-                from 4 successful LLM-based projects. Founder at <span className="text-gray-900 font-semibold">Nexentia</span> – 
+            <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
+              <h3 className="text-2xl font-bold text-secondary-600 mb-4 flex items-center gap-3">
+                💼 <span>Professional Experience</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Selected as an <span className="text-slate-800 font-semibold">AI Expert on Outlier</span>, earned international income ($25) 
+                from 4 successful LLM-based projects. Founder at <span className="text-slate-800 font-semibold">Nexentia</span> – 
                 a startup focused on AI, automation, web, Android, and SEO/SEM services.
               </p>
             </div>
           </div>
 
           <div className="space-y-6">
-            <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-orange-600 mb-4">📺 YouTube Educator</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+            <div className="modern-card p-8 card-hover border-l-4 border-orange-400">
+              <h3 className="text-2xl font-bold text-orange-600 mb-4 flex items-center gap-3">
+                📺 <span>YouTube Educator</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed mb-4">
                 I run a YouTube channel to simplify concepts in LLMs and emerging tech. 
                 My goal is to make complex AI concepts accessible to everyone.
               </p>
@@ -46,28 +54,29 @@ const About = () => {
                 href="https://www.youtube.com/@-AtharvaPatange"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-cyan-600 hover:text-cyan-500 font-semibold transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200 group"
               >
-                Visit Channel →
+                Visit Channel 
+                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
               </a>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
-                <div className="text-3xl font-bold gradient-text mb-2">3+</div>
-                <div className="text-gray-500">Years Experience</div>
+              <div className="modern-card p-6 text-center card-hover group">
+                <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">3+</div>
+                <div className="text-slate-500 font-medium">Years Experience</div>
               </div>
-              <div className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
-                <div className="text-3xl font-bold gradient-text mb-2">25+</div>
-                <div className="text-gray-400">Projects Built</div>
+              <div className="modern-card p-6 text-center card-hover group">
+                <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">25+</div>
+                <div className="text-slate-500 font-medium">Projects Built</div>
               </div>
-              <div className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
-                <div className="text-3xl font-bold gradient-text mb-2">4+</div>
-                <div className="text-gray-400">Hackathons Won</div>
+              <div className="modern-card p-6 text-center card-hover group">
+                <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">4+</div>
+                <div className="text-slate-500 font-medium">Hackathons Won</div>
               </div>
-              <div className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
-                <div className="text-3xl font-bold gradient-text mb-2">500+</div>
-                <div className="text-gray-400">Linkedin Connections</div>
+              <div className="modern-card p-6 text-center card-hover group">
+                <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+                <div className="text-slate-500 font-medium">LinkedIn Connections</div>
               </div>
             </div>
           </div>

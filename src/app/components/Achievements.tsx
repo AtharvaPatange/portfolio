@@ -55,12 +55,12 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Achievements & Milestones</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Celebrating the journey of innovation, learning, and impact
           </p>
         </div>
@@ -68,10 +68,10 @@ const Achievements = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
-              <div className="text-4xl mb-2">{stat.icon}</div>
+            <div key={index} className="modern-card p-6 text-center card-hover group">
+              <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
               <div className="text-3xl font-bold gradient-text mb-1">{stat.number}</div>
-              <div className="text-gray-500 text-sm">{stat.label}</div>
+              <div className="text-slate-500 text-sm font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -79,25 +79,25 @@ const Achievements = () => {
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="backdrop-blur-glass rounded-2xl overflow-hidden card-hover group">
+            <div key={index} className="modern-card rounded-2xl overflow-hidden card-hover group">
               <div className={`h-1 bg-gradient-to-r ${achievement.color}`}></div>
               
               <div className="p-8">
                 <div className="flex items-start mb-4">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${achievement.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {achievement.icon}
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${achievement.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="text-white">{achievement.icon}</div>
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-semibold text-cyan-600 mb-2">
+                    <div className="text-sm font-semibold text-primary-600 mb-2">
                       {achievement.highlight}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-primary-600 transition-colors duration-300">
                       {achievement.title}
                     </h3>
                   </div>
                 </div>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {achievement.description}
                 </p>
               </div>
@@ -107,14 +107,14 @@ const Achievements = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Collaborate?</h3>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
+            <h3 className="text-2xl font-bold text-slate-800 mb-4">Ready to Collaborate?</h3>
+            <p className="text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed">
               I'm always excited to work on innovative projects that push the boundaries of AI/ML and create meaningful impact.
             </p>
             <a
               href="#contact"
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="modern-button inline-flex items-center gap-2"
             >
               Let's Connect
             </a>
