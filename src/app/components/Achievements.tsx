@@ -55,12 +55,12 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-900">
+    <div className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Achievements & Milestones</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Celebrating the journey of innovation, learning, and impact
           </p>
         </div>
@@ -71,7 +71,7 @@ const Achievements = () => {
             <div key={index} className="backdrop-blur-glass rounded-xl p-6 text-center card-hover">
               <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-3xl font-bold gradient-text mb-1">{stat.number}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-gray-500 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -88,16 +88,16 @@ const Achievements = () => {
                     {achievement.icon}
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">
+                    <div className="text-sm font-semibold text-cyan-600 mb-2">
                       {achievement.highlight}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
                       {achievement.title}
                     </h3>
                   </div>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   {achievement.description}
                 </p>
               </div>
@@ -108,8 +108,8 @@ const Achievements = () => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Collaborate?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Collaborate?</h3>
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               I'm always excited to work on innovative projects that push the boundaries of AI/ML and create meaningful impact.
             </p>
             <a

@@ -33,7 +33,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="py-20 bg-black">
+    <div className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Work Experience</h2>
@@ -45,15 +45,15 @@ const Experience = () => {
             <div key={index} className="backdrop-blur-glass rounded-2xl p-8 card-hover">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{exp.title}</h3>
                   <h4 className="text-xl font-semibold gradient-text mb-4">{exp.company}</h4>
                 </div>
                 <div className="flex flex-col md:items-end space-y-2">
-                  <div className="flex items-center text-gray-400">
+                  <div className="flex items-center text-gray-500">
                     <Calendar size={16} className="mr-2" />
                     {exp.duration}
                   </div>
-                  <div className="flex items-center text-gray-400">
+                  <div className="flex items-center text-gray-500">
                     <MapPin size={16} className="mr-2" />
                     {exp.location}
                   </div>
@@ -63,15 +63,15 @@ const Experience = () => {
               <div className="space-y-3 mb-6">
                 {exp.description.map((point, idx) => (
                   <div key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-300 text-lg">{point}</p>
+                    <div className="w-2 h-2 bg-cyan-600 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-lg">{point}</p>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-2">
                 {exp.tech.map((tech, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-gray-800 text-cyan-400 rounded-full text-sm font-medium">
+                  <span key={idx} className="px-3 py-1 bg-gray-200 text-cyan-600 rounded-full text-sm font-medium">
                     {tech}
                   </span>
                 ))}

@@ -78,12 +78,12 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-20 bg-black">
+    <div className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Let's Collaborate</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-green-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Ready to work together on innovative AI/ML projects? Let's create something amazing!
           </p>
         </div>
@@ -91,7 +91,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
             
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
@@ -102,7 +102,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Your Name
                   </label>
                   <input
@@ -112,12 +112,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Your Email
                   </label>
                   <input
@@ -127,14 +127,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
                 </label>
                 <input
@@ -144,13 +144,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200"
                   placeholder="Let's collaborate on an AI project"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -160,7 +160,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-gray-900 transition-colors duration-200 resize-none"
                   placeholder="Tell me about your project idea or how we can work together..."
                 ></textarea>
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -189,24 +189,24 @@ const Contact = () => {
           <div className="space-y-8">
             {/* Contact Info */}
             <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mr-4">
+                    <div className="p-3 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg mr-4">
                       {info.icon}
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm">{info.label}</p>
+                      <p className="text-gray-500 text-sm">{info.label}</p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-white font-medium hover:text-cyan-400 transition-colors duration-200"
+                          className="text-gray-900 font-medium hover:text-cyan-600 transition-colors duration-200"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-white font-medium">{info.value}</p>
+                        <p className="text-gray-900 font-medium">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -216,7 +216,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
-              <h3 className="text-2xl font-bold text-white mb-6">Follow Me</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Me</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -224,7 +224,7 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 ${social.color}`}
+                    className={`flex items-center p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 ${social.color.replace('text-', 'text-')}`}
                   >
                     {social.icon}
                     <span className="ml-3 font-medium">{social.label}</span>
@@ -236,13 +236,13 @@ const Contact = () => {
             {/* Call to Action */}
             <div className="backdrop-blur-glass rounded-2xl p-8 card-hover">
               <h3 className="text-xl font-bold gradient-text mb-4">Open to Opportunities</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 I'm always interested in challenging projects, research opportunities, and collaborations in AI/ML, 
                 full-stack development, and innovative tech solutions.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["AI/ML Projects", "Research", "Hackathons", "Consulting", "Full-Stack Dev"].map((tag, index) => (
-                  <span key={index} className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 rounded-full text-sm">
+                  <span key={index} className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-600 rounded-full text-sm">
                     {tag}
                   </span>
                 ))}

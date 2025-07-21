@@ -48,8 +48,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'backdrop-blur-lg bg-black/60 shadow-xl border-b border-gray-800'
-          : 'bg-black/30'
+          ? 'backdrop-blur-lg bg-white/80 shadow-xl border-b border-gray-200'
+          : 'bg-white/60'
       }`}
       style={{ WebkitBackdropFilter: 'blur(16px)' }}
     >
@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 flex-shrink-0 select-none">
             <span className="text-cyan-400"><Sparkles size={28} /></span>
-            <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg">AP</h1>
+            <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">AP</h1>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:block">
@@ -67,12 +67,12 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   className={`group relative px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200
-                    ${activeSection === item.id ? 'text-cyan-400' : 'text-gray-200 hover:text-cyan-400'}
+                    ${activeSection === item.id ? 'text-cyan-600' : 'text-gray-800 hover:text-cyan-600'}
                   `}
                 >
                   {item.name}
                   <span
-                    className={`absolute left-0 right-0 bottom-0 mx-auto h-0.5 bg-cyan-400 rounded transition-all duration-300
+                    className={`absolute left-0 right-0 bottom-0 mx-auto h-0.5 bg-cyan-600 rounded transition-all duration-300
                       ${activeSection === item.id ? 'w-full' : 'w-0 group-hover:w-full'}`}
                     style={{ transitionProperty: 'width' }}
                   />
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-400 hover:text-cyan-400 focus:outline-none focus:text-cyan-400 transition-colors"
+              className="text-gray-600 hover:text-cyan-600 focus:outline-none focus:text-cyan-600 transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -94,7 +94,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-16 left-0 w-full bg-black/80 backdrop-blur-lg shadow-lg border-b border-gray-800 transition-transform duration-300 ease-in-out
+        className={`md:hidden fixed top-16 left-0 w-full bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-200 transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-8 opacity-0 pointer-events-none'}`}
         style={{ WebkitBackdropFilter: 'blur(16px)' }}
       >
@@ -104,7 +104,7 @@ const Navbar = () => {
               key={item.name}
               href={item.href}
               className={`block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200
-                ${activeSection === item.id ? 'text-cyan-400' : 'text-gray-200 hover:text-cyan-400'}
+                ${activeSection === item.id ? 'text-cyan-600' : 'text-gray-800 hover:text-cyan-600'}
               `}
               onClick={() => setIsMobileMenuOpen(false)}
             >

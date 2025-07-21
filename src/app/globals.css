@@ -3,17 +3,17 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --primary: #00D9FF;
-  --secondary: #00FF88;
+  --primary: #00B4D8;
+  --secondary: #48CAE4;
   --accent: #8B5FFF;
-  --success: #00FF7F;
+  --success: #43AA8B;
   --warning: #FFD700;
   --error: #FF4757;
-  --bg-dark: #0A0A0F;
-  --bg-darker: #050509;
-  --text-light: #FFFFFF;
-  --text-gray: #A0A0A0;
-  --border: #1F1F2E;
+  --bg-light: #F8FAFC;
+  --bg-lighter: #FFFFFF;
+  --text-dark: #1A202C;
+  --text-gray: #4B5563;
+  --border: #E5E7EB;
 }
 
 * {
@@ -27,8 +27,8 @@ html {
 }
 
 body {
-  color: var(--text-light);
-  background: var(--bg-dark);
+  color: var(--text-dark);
+  background: var(--bg-light);
   line-height: 1.6;
 }
 
