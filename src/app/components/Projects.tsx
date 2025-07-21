@@ -1,8 +1,9 @@
-import { Trophy, Eye, Github, ExternalLink, Target, Zap } from 'lucide-react';
+import { Trophy, Eye, Github, ExternalLink, Target, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useRef } from 'react';
 
 const Projects = () => {
   const projects: Array<{
@@ -65,13 +66,31 @@ const Projects = () => {
     }
   ];
 
+  const swiperRef = useRef<any>(null);
+
   return (
     <div className="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
-      <div className="w-full">
+      <div className="w-full relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Major AI/ML Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full"></div>
         </div>
+
+        {/* Arrows */}
+        <button
+          className="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur-lg border border-slate-200 rounded-full shadow-lg w-12 h-12 hover:bg-primary-100 hover:text-primary-600 transition-all duration-200"
+          onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous project"
+        >
+          <ChevronLeft size={28} />
+        </button>
+        <button
+          className="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur-lg border border-slate-200 rounded-full shadow-lg w-12 h-12 hover:bg-primary-100 hover:text-primary-600 transition-all duration-200"
+          onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next project"
+        >
+          <ChevronRight size={28} />
+        </button>
 
         <Swiper
           modules={[Pagination, A11y, Autoplay]}
@@ -87,6 +106,7 @@ const Projects = () => {
             768: { slidesPerView: 1 },
             1024: { slidesPerView: 1.2 },
           }}
+          onSwiper={swiper => (swiperRef.current = swiper)}
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
