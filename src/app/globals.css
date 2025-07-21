@@ -99,9 +99,9 @@ body {
 }
 
 .backdrop-blur-glass {
-  background: rgba(10, 10, 15, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.7);
 }
 
 .tech-icon:hover {

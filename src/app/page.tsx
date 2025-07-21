@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <main className="min-h-screen bg-white">
       <div 
         className="scroll-indicator"
         style={{ transform: `scaleX(${scrollProgress})` }}
