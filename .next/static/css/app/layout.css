@@ -806,6 +806,9 @@ video {
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1913,6 +1916,10 @@ body {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:max-w-5xl {
+    max-width: 64rem;
   }
 
   .lg\:grid-cols-2 {

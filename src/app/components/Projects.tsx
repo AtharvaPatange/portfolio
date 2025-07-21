@@ -67,7 +67,7 @@ const Projects = () => {
 
   return (
     <div className="py-20 bg-gradient-to-b from-bg-secondary to-bg-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">Major AI/ML Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full"></div>
@@ -82,7 +82,7 @@ const Projects = () => {
           speed={800}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
-          className="!pb-12"
+          className="w-full !pb-12"
           breakpoints={{
             768: { slidesPerView: 1 },
             1024: { slidesPerView: 1.2 },
@@ -90,7 +90,7 @@ const Projects = () => {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full">
+              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full w-full max-w-4xl lg:max-w-5xl mx-auto">
                 {/* Modern gradient border accent */}
                 <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color ? project.color : 'from-primary-500 to-accent-500'} z-10`}></div>
                 {/* Floating badge for award */}
