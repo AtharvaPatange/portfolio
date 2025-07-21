@@ -1,56 +1,62 @@
+import { GraduationCap, Rocket, Briefcase, Youtube } from 'lucide-react';
+
 const About = () => {
   return (
     <div className="py-20 bg-gradient-to-b from-bg-primary to-bg-secondary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">About Me</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full"></div>
+          <h2 className="text-4xl sm:text-5xl font-bold gradient-text drop-shadow-lg mb-4">About Me</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full shadow-md"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <div className="space-y-7">
+            {/* Education */}
+            <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-primary-100 shadow-lg p-8 card-hover">
               <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
-                🎓 <span>Education & Background</span>
+                <GraduationCap className="w-7 h-7 text-primary-500" /> Education & Background
               </h3>
-              <p className="text-slate-600 text-lg leading-relaxed mb-2">
+              <div className="mb-2">
                 <span className="text-slate-800 font-semibold">Walchand Institute of Technology, Solapur</span><br/>
                 <span className="italic">BTech • <b>Information Technology (Major)</b>, Electronics and Computer Engineering (Minor)</span> • 2022 - 2027
-              </p>
-              <p className="text-slate-600 text-lg leading-relaxed">
+              </div>
+              <div>
                 <span className="text-slate-800 font-semibold">Walchand College of Arts and Science, Solapur</span><br/>
                 <span className="italic">Higher Secondary Certificate (HSC)</span> • 2020 - 2022
-              </p>
+              </div>
             </div>
 
-            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+            {/* Specializations */}
+            <div className="rounded-2xl  border border-primary-100 shadow-lg p-8 card-hover">
               <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
-                🚀 <span>Specializations</span>
+                <Rocket className="w-7 h-7 text-accent-500" /> Specializations
               </h3>
-              <p className="text-slate-600 text-lg leading-relaxed">
-                I specialize in <span className="text-slate-800 font-semibold">AI/ML, GenAI and full-stack development</span>. 
+              <p className="text-slate-700 text-lg leading-relaxed">
+                I specialize in <span className="text-primary-700 font-semibold">AI/ML, GenAI and full-stack development</span>. 
                 My passion lies in creating intelligent solutions that solve real-world problems.
               </p>
             </div>
 
-            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+            {/* Professional Experience */}
+            <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-primary-100 shadow-lg p-8 card-hover">
               <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
-                💼 <span>Professional Experience</span>
+                <Briefcase className="w-7 h-7 text-secondary-500" /> Professional Experience
               </h3>
-              <p className="text-slate-600 text-lg leading-relaxed">
-                Selected as an <span className="text-slate-800 font-semibold">AI Expert on Outlier</span>, earned international income ($25) 
-                from 4 successful LLM-based projects. Founder at <span className="text-slate-800 font-semibold">Nexentia</span> – 
+              <p className="text-slate-700 text-lg leading-relaxed">
+                Selected as an <span className="text-primary-700 font-semibold">AI Expert on Outlier</span>, earned international income ($25) 
+                from 4 successful LLM-based projects. Founder at <span className="text-primary-700 font-semibold">Nexentia</span> – 
                 a startup focused on AI, automation, web, Android, and SEO/SEM services.
               </p>
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+          <div className="space-y-7">
+            {/* YouTube Educator */}
+            <div className="rounded-2xl border border-primary-100 shadow-lg p-8 card-hover">
               <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
-                📺 <span>YouTube Educator</span>
+                <Youtube className="w-7 h-7 text-primary-500" /> YouTube Educator
               </h3>
-              <p className="text-slate-600 text-lg leading-relaxed mb-4">
+              <p className="text-slate-700 text-lg leading-relaxed mb-4">
                 I run a YouTube channel to simplify concepts in LLMs and emerging tech. 
                 My goal is to make complex AI concepts accessible to everyone.
               </p>
@@ -65,20 +71,21 @@ const About = () => {
               </a>
             </div>
 
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="modern-card p-6 text-center card-hover group">
+              <div className="rounded-2xl bg-white/80 border border-primary-100 shadow-md p-6 text-center card-hover group">
                 <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">3+</div>
                 <div className="text-slate-500 font-medium">Years Experience</div>
               </div>
-              <div className="modern-card p-6 text-center card-hover group">
+              <div className="rounded-2xl bg-white/80 border border-primary-100 shadow-md p-6 text-center card-hover group">
                 <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">25+</div>
                 <div className="text-slate-500 font-medium">Projects Built</div>
               </div>
-              <div className="modern-card p-6 text-center card-hover group">
+              <div className="rounded-2xl bg-white/80 border border-primary-100 shadow-md p-6 text-center card-hover group">
                 <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">4+</div>
                 <div className="text-slate-500 font-medium">Hackathons Won</div>
               </div>
-              <div className="modern-card p-6 text-center card-hover group">
+              <div className="rounded-2xl bg-white/80 border border-primary-100 shadow-md p-6 text-center card-hover group">
                 <div className="text-3xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
                 <div className="text-slate-500 font-medium">LinkedIn Connections</div>
               </div>
