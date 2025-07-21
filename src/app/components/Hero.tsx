@@ -18,14 +18,6 @@ const Hero = () => {
     }
   }, [currentIndex, fullText]);
 
-  const handleDownloadResume = () => {
-    // Create a placeholder resume download
-    const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'Atharva_Patange_Resume.pdf';
-    link.click();
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -48,13 +40,14 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <button
-            onClick={handleDownloadResume}
+          <a
+            href="/resume.pdf"
+            download
             className="modern-button-outline flex items-center gap-2 hover:scale-105 transition-all duration-300"
           >
             <Download size={20} />
             Download Resume
-          </button>
+          </a>
           
           <a
             href="https://www.youtube.com/@-AtharvaPatange"

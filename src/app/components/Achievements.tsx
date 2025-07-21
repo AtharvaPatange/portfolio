@@ -6,14 +6,12 @@ const Achievements = () => {
       icon: <Trophy className="w-8 h-8" />,
       title: "Winner, Infosys AI in Action Hackathon",
       description: "National-level hackathon winner for AI-powered crop classification system",
-      color: "from-yellow-400 to-orange-500",
       highlight: "🏆 National Winner"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Google Gemini API Developer Competition",
       description: "Developed an AI-powered app, Cookbook,The event is part of the global competition for developers working with the Gemini API.",
-      color: "from-blue-400 to-indigo-500",
       highlight: "🤖 Gemini API Developer"
     },
   
@@ -21,28 +19,24 @@ const Achievements = () => {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Founder at Nexentia",
       description: "Founded AI & Software startup focusing on automation, web, Android, and SEO/SEM services",
-      color: "from-purple-400 to-pink-500",
       highlight: "🌐 Startup Founder"
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "LinkedIn Network",
       description: "500+ LinkedIn connections, building a strong professional network in tech and AI.",
-      color: "from-red-400 to-pink-500",
       highlight: "🔗 500+ Connections"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Problem Solving: 250+ DSA Problems",
       description: "Successfully solved over 250+ DSA problems consistently using Java.",
-      color: "from-green-400 to-blue-500",
       highlight: "📚 250+ DSA Problems"
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
       title: "International AI Project Income",
       description: "Earned international income via Outlier as AI Expert from 4 successful LLM-based projects",
-      color: "from-cyan-400 to-blue-500",
       highlight: "🌍 International Income"
     }
   ];
@@ -79,12 +73,12 @@ const Achievements = () => {
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="modern-card rounded-2xl overflow-hidden card-hover group">
-              <div className={`h-1 bg-gradient-to-r ${achievement.color}`}></div>
+            <div key={index} className="modern-card rounded-2xl overflow-hidden card-hover group border-l-4 border-primary-400">
+              <div className="h-1 bg-gradient-to-r from-primary-500 to-primary-600"></div>
               
               <div className="p-8">
                 <div className="flex items-start mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${achievement.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 mr-4 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-white">{achievement.icon}</div>
                   </div>
                   <div className="flex-1">

@@ -19,8 +19,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="modern-card p-8 card-hover border-l-4 border-accent-400">
-              <h3 className="text-2xl font-bold text-accent-600 mb-4 flex items-center gap-3">
+            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+              <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
                 🚀 <span>Specializations</span>
               </h3>
               <p className="text-slate-600 text-lg leading-relaxed">
@@ -29,8 +29,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
-              <h3 className="text-2xl font-bold text-secondary-600 mb-4 flex items-center gap-3">
+            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+              <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
                 💼 <span>Professional Experience</span>
               </h3>
               <p className="text-slate-600 text-lg leading-relaxed">
@@ -42,8 +42,8 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="modern-card p-8 card-hover border-l-4 border-orange-400">
-              <h3 className="text-2xl font-bold text-orange-600 mb-4 flex items-center gap-3">
+            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
+              <h3 className="text-2xl font-bold text-primary-600 mb-4 flex items-center gap-3">
                 📺 <span>YouTube Educator</span>
               </h3>
               <p className="text-slate-600 text-lg leading-relaxed mb-4">

@@ -236,7 +236,7 @@ const Contact = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="modern-card p-8 card-hover border-l-4 border-secondary-400">
+            <div className="modern-card p-8 card-hover border-l-4 border-primary-400">
               <h3 className="text-xl font-bold gradient-text mb-4">Open to Opportunities</h3>
               <p className="text-slate-600 mb-4 leading-relaxed">
                 I'm always interested in challenging projects, research opportunities, and collaborations in AI/ML, 
@@ -244,7 +244,7 @@ const Contact = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {["AI/ML Projects", "Research", "Hackathons", "Consulting", "Full-Stack Dev"].map((tag, index) => (
-                  <span key={index} className="px-3 py-1 bg-gradient-to-r from-primary-50 to-accent-50 border border-primary-200 text-primary-700 rounded-full text-sm font-medium">
+                  <span key={index} className="px-3 py-1 bg-primary-50 border border-primary-200 text-primary-700 rounded-full text-sm font-medium">
                     {tag}
                   </span>
                 ))}

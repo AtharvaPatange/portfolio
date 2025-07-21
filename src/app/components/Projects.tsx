@@ -14,8 +14,7 @@ const Projects = () => {
       architecture: "Data Collection → Preprocessing → Feature Extraction → ML Training → Classification",
       impact: "Optimized agriculture monitoring, yield prediction, and food security planning",
       tech: ["Google Earth Engine", "Random Forest", "Python", "Scikit-learn"],
-      award: "Winner, Infosys AI in Action – National-level hackathon",
-      color: "from-green-400 to-emerald-600"
+      award: "Winner, Infosys AI in Action – National-level hackathon"
     },
     {
       title: "Fake News & Deepfake Detection System",
@@ -26,8 +25,7 @@ const Projects = () => {
         "CNN + LSTM for fake face detection in deepfake videos"
       ],
       tech: ["TensorFlow", "Python", "Flask", "LLM APIs", "Google News API"],
-      impact: "Combats misinformation using hybrid AI models",
-      color: "from-blue-400 to-indigo-600"
+      impact: "Combats misinformation using hybrid AI models"
     },
     {
       title: "Smart Waste Bin",
@@ -40,8 +38,7 @@ const Projects = () => {
         "Rewards system, user gamification, revenue opportunities"
       ],
       tech: ["YOLOv8", "ResNet", "Firebase", "Python", "Flutter", "ML"],
-      accuracy: "95%",
-      color: "from-purple-400 to-pink-600"
+      accuracy: "95%"
     }
   ];
 
@@ -75,7 +72,7 @@ const Projects = () => {
             <SwiperSlide key={index}>
               <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full">
                 {/* Modern gradient border accent */}
-                <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color} z-10`}></div>
+                <div className="absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r from-primary-500 to-primary-600 z-10"></div>
                 {/* Floating badge for award */}
                 {project.award && (
                   <div className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-amber-100/90 border border-amber-300 text-amber-700 rounded-full shadow-md font-semibold text-sm animate-pulse">
@@ -91,7 +88,7 @@ const Projects = () => {
                   <p className="text-slate-600 text-lg leading-relaxed mb-2">{project.description}</p>
                   {project.architecture && (
                     <div className="mb-2">
-                      <h4 className="text-base font-semibold text-accent-600 mb-1 flex items-center gap-2">
+                      <h4 className="text-base font-semibold text-primary-600 mb-1 flex items-center gap-2">
                         <Target size={18} /> Architecture
                       </h4>
                       <p className="text-slate-600 bg-slate-50 border border-slate-200 p-3 rounded-lg font-mono text-xs">
@@ -101,7 +98,7 @@ const Projects = () => {
                   )}
                   {project.features && (
                     <div className="mb-2">
-                      <h4 className="text-base font-semibold text-secondary-600 mb-1 flex items-center gap-2">
+                      <h4 className="text-base font-semibold text-primary-600 mb-1 flex items-center gap-2">
                         <Zap size={18} /> Key Features
                       </h4>
                       <ul className="grid md:grid-cols-2 gap-2 list-disc list-inside">
