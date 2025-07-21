@@ -1,4 +1,4 @@
-import { Trophy, Award, Users, TrendingUp, Globe, DollarSign } from 'lucide-react';
+import { Trophy, Award, Users, TrendingUp, Globe, DollarSign, Laptop, AlarmClock, Link2 } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
@@ -47,10 +47,10 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "25+", label: "Projects Built", icon: "💻" },
-    { number: "4+", label: "Hackathons Won", icon: "🏆" },
-    { number: "3+", label: "Years Experience", icon: "⏰" },
-    { number: "500+", label: "LinkedIn Connections", icon: "🔗" }
+    { number: "25+", label: "Projects Built", icon: <Laptop className="w-8 h-8 text-primary-500 mb-2 mx-auto" /> },
+    { number: "4+", label: "Hackathons Won", icon: <Trophy className="w-8 h-8 text-accent-500 mb-2 mx-auto" /> },
+    { number: "3+", label: "Years Experience", icon: <AlarmClock className="w-8 h-8 text-secondary-500 mb-2 mx-auto" /> },
+    { number: "500+", label: "LinkedIn Connections", icon: <Link2 className="w-8 h-8 text-slate-400 mb-2 mx-auto" /> }
   ];
 
   return (
@@ -67,9 +67,9 @@ const Achievements = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="modern-card p-6 text-center card-hover group">
-              <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
-              <div className="text-3xl font-bold gradient-text mb-1">{stat.number}</div>
+            <div key={index} className="rounded-2xl bg-white/80 border border-primary-100 shadow-md p-6 text-center card-hover group flex flex-col items-center">
+              {stat.icon}
+              <div className="text-3xl font-bold gradient-text mb-1 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
               <div className="text-slate-500 text-sm font-medium">{stat.label}</div>
             </div>
           ))}
