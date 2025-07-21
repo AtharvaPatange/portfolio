@@ -60,7 +60,7 @@ const Hero = () => {
             href="https://www.youtube.com/@-AtharvaPatange"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-red-50 border-2 border-red-400 text-red-600 hover:bg-red-500 hover:text-white hover:border-red-500 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="flex items-center gap-2 bg-primary-50 border-2 border-primary-400 text-primary-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <Youtube size={20} />
             YouTube Channel
@@ -70,7 +70,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/atharva-patange-7596092a1/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-blue-50 border-2 border-blue-400 text-blue-600 hover:bg-blue-500 hover:text-white hover:border-blue-500 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="flex items-center gap-2 bg-primary-50 border-2 border-primary-400 text-primary-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <Linkedin size={20} />
             LinkedIn

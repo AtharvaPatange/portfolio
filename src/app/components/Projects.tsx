@@ -1,8 +1,7 @@
 import { Trophy, Eye, Github, ExternalLink, Target, Zap } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
+import { Pagination, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
@@ -55,20 +54,16 @@ const Projects = () => {
         </div>
 
         <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow]}
+          modules={[Pagination, A11y, Autoplay, EffectCoverflow]}
           spaceBetween={32}
           slidesPerView={1}
           centeredSlides={true}
           loop={true}
+          loopFillGroupWithBlank={true}
           speed={800}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           effect="coverflow"
           coverflowEffect={{ rotate: 30, stretch: 0, depth: 200, modifier: 1, slideShadows: false }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            hideOnClick: true,
-          }}
           pagination={{ clickable: true }}
           className="!pb-12"
           breakpoints={{
@@ -78,7 +73,7 @@ const Projects = () => {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl">
+              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full">
                 {/* Modern gradient border accent */}
                 <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color} z-10`}></div>
                 {/* Floating badge for award */}
@@ -88,7 +83,7 @@ const Projects = () => {
                     Winner
                   </div>
                 )}
-                <div className="p-8 md:p-10 flex flex-col gap-6">
+                <div className="p-8 md:p-10 flex flex-col gap-6 flex-1">
                   <div>
                     <h3 className="text-3xl font-extrabold text-slate-800 mb-1 gradient-text drop-shadow-sm">{project.title}</h3>
                     <p className="text-lg text-primary-600 mb-3 font-medium">{project.subtitle}</p>
@@ -147,8 +142,6 @@ const Projects = () => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="swiper-button-prev hidden md:block"></div>
-          <div className="swiper-button-next hidden md:block"></div>
         </Swiper>
       </div>
     </div>

@@ -16,7 +16,6 @@ const TechStack = () => {
     {
       name: "AI/ML & Data Science",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
       skills: [
         { name: "Python", level: 95 },
         { name: "TensorFlow", level: 90 },
@@ -27,7 +26,6 @@ const TechStack = () => {
     {
       name: "Backend Development",
       icon: <Code className="w-8 h-8" />,
-      color: "from-green-500 to-teal-500",
       skills: [
         { name: "Django", level: 90 },
         { name: "Flask", level: 85 },
@@ -38,7 +36,6 @@ const TechStack = () => {
     {
       name: "Frontend & Mobile",
       icon: <Smartphone className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
       skills: [
         { name: "React", level: 88 },
         { name: "Next.js", level: 85 },
@@ -49,7 +46,6 @@ const TechStack = () => {
     {
       name: "Cloud & DevOps",
       icon: <Cloud className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
       skills: [
         { name: "Firebase", level: 88 },
         { name: "GCP", level: 82 },
@@ -61,7 +57,6 @@ const TechStack = () => {
     {
       name: "Databases & Search",
       icon: <Database className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
       skills: [
         { name: "PostgreSQL", level: 85 },
         { name: "MongoDB", level: 80 },
@@ -73,7 +68,6 @@ const TechStack = () => {
     {
       name: "Specialized Tools",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
       skills: [
         { name: "Google Earth Engine", level: 85 },
         { name: "LLMs (GPT/Gemini)", level: 90 },
@@ -97,9 +91,9 @@ const TechStack = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techCategories.map((category, index) => (
-            <div key={index} className="modern-card p-8 card-hover group">
+            <div key={index} className="modern-card p-8 card-hover group border-l-4 border-primary-400">
               <div className="flex items-center mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="p-3 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 mr-4 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-white">{category.icon}</div>
                 </div>
                 <h3 className="text-xl font-bold text-slate-800 group-hover:text-primary-600 transition-colors duration-300">{category.name}</h3>
@@ -112,9 +106,9 @@ const TechStack = () => {
                       <span className="text-slate-700 font-medium">{skill.name}</span>
                       <span className="text-primary-600 font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-slate-100 rounded-full h-2">
+                    <div className="w-full bg-slate-100 rounded-full h-2.5">
                       <div
-                        className={`h-2 rounded-full bg-gradient-to-r ${category.color} transition-all duration-1000 ease-out`}
+                        className="h-2.5 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
