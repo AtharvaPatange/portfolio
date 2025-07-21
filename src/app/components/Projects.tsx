@@ -126,13 +126,13 @@ const Projects = () => {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full w-full max-w-4xl lg:max-w-5xl mx-auto">
+              <div className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl border border-slate-100 transition-transform duration-300 hover:shadow-3xl min-h-[540px] flex flex-col h-full w-full max-w-4xl lg:max-w-5xl mx-auto px-2 sm:px-4">
                 {/* Modern gradient border accent */}
                 <div className={`absolute -top-1 -left-1 right-0 h-1 bg-gradient-to-r ${project.color ? project.color : 'from-primary-500 to-accent-500'} z-10`}></div>
                 {/* Floating badge for award */}
                 {project.award && (
-                  <div className="absolute top-6 right-6 z-20 flex items-center gap-2 px-4 py-2 bg-amber-100/90 border border-amber-300 text-amber-700 rounded-full shadow-md font-semibold text-sm animate-pulse">
-                    <Trophy size={18} className="mr-1" />
+                  <div className="absolute top-3 right-2 md:top-6 md:right-6 z-20 flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 bg-amber-100/90 border border-amber-300 text-amber-700 rounded-full shadow-md font-semibold text-xs md:text-sm animate-pulse">
+                    <Trophy size={16} className="mr-1" />
                     Winner
                   </div>
                 )}
